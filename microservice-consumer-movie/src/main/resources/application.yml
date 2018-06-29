@@ -1,5 +1,5 @@
 server:
-  port: 7901
+  port: 8001
 spring:
 #指定在Eureka中的应用名
   application:

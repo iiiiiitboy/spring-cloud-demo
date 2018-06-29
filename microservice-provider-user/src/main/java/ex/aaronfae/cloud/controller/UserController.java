@@ -43,10 +43,9 @@ public class UserController {
 	}
 
 	@GetMapping("/instance-info")
-	public ServiceInstance showInfo() {
+	public List<ServiceInstance> showInfo() {
 		String serviceId = this.registration.getServiceId();
 		List<ServiceInstance> instances = this.discoveryClient.getInstances(serviceId);
-		ServiceInstance instance = instances.get(0);
-		return instance;
+		return instances;
 	}
 }
