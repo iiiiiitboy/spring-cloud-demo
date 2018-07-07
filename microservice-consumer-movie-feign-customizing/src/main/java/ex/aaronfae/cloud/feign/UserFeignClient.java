@@ -11,5 +11,5 @@ import feign.RequestLine;
 public interface UserFeignClient {
 
 	@RequestLine(value = "GET /user/{id}")
-	public User findOneById(@Param("id") Long id);
+	User findOneById(@Param("id") Long id);
 }
