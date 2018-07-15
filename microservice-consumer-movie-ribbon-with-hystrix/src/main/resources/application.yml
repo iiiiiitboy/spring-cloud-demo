@@ -1,0 +1,22 @@
+server:
+  port: 8006
+spring:
+#指定在Eureka中的应用名
+  application:
+    name: microservice-consumer-movie-ribbon-with-hystrix
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    ex.aaronfae.cloud: DEBUG
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://af:123456@localhost:8761/eureka/
+#指定在Eureka中链接地址为IP而非HostName
+  instance:
+    prefer-ip-address: true
